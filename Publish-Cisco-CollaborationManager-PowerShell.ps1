@@ -1,8 +1,8 @@
 <#
 	.SYNOPSIS
-        Publish the Cisco-CallManager-PowerShell module to the PowerShell Gallery.
+        Publish the Cisco-CollaborationManager-PowerShell module to the PowerShell Gallery.
     .DESCRIPTION
-        The Cisco-CallManager-PowerShell gets published to a public nuget feed. This
+        The Cisco-CollaborationManager-PowerShell gets published to a public nuget feed. This
         script will be most likely ran from a CI pipeline.
 #>
 [CmdletBinding()]
@@ -12,7 +12,7 @@ Param (
     [string]$NuGetApiKey
 )
 
-$moduleName = "Cisco-CallManager-PowerShell"
+$moduleName = "Cisco-CollaborationManager-PowerShell"
 Push-Location $PSScriptRoot
 
 try {

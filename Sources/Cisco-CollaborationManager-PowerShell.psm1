@@ -1,7 +1,7 @@
 
 # Source all PowerShell scripts in order to export module member functions
-$cucm_path = "$($env:userprofile)\AppData\Local\AdminTools\CUCM"
-if (-Not (Test-Path -Path $cucm_path)) { New-Item -Path $cucm_path -ItemType Directory }
+$ccm_path = "$($env:userprofile)\AppData\Local\AdminTools\CCM"
+if (-Not (Test-Path -Path $ccm_path)) { New-Item -Path $ccm_path -ItemType Directory }
 
 #Get public and private function definition files.
 $Public  = @( Get-ChildItem -Path $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )

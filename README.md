@@ -7,7 +7,7 @@ This repository contains a collection of PowerShell scripts that can be used to 
 ## Developing
 
 ```powershell
-Import-Module .\Sources\Cisco-CallManager-PowerShell.psm1 -Force
+Import-Module .\Sources\Cisco-CollaborationManager-PowerShell.psm1 -Force
 ```
 
 ## Usage

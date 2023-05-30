@@ -9,7 +9,7 @@ Function global:Get-CCMVersion {
     $ConfigFile = Get-CCMSettingsFile
 
     $SOAP = @"
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
     <soapenv:Header/>
     <soapenv:Body>
        <ns:getCCMVersion>

@@ -32,7 +32,7 @@ Function global:Get-CCMTranslationPattern {
 
     if ($UUID -ne "") {
         $SOAP = @"
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
         <soapenv:Header/>
         <soapenv:Body>
            <ns:getTransPattern sequence="?">
@@ -121,7 +121,7 @@ Function global:Get-CCMTranslationPattern {
     }
     else {
         $SOAP = @"
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
         <soapenv:Header/>
         <soapenv:Body>
            <ns:listTransPattern sequence="?">

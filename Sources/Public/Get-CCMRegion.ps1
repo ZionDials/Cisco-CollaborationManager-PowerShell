@@ -32,7 +32,7 @@ Function global:Get-CCMRegion {
 
     if ($UUID -ne "") {
         $SOAP = @"
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
         <soapenv:Header/>
         <soapenv:Body>
            <ns:getRegion>
@@ -61,7 +61,7 @@ Function global:Get-CCMRegion {
     }
     else {
         $SOAP = @"
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
         <soapenv:Header/>
         <soapenv:Body>
            <ns:listRegion>

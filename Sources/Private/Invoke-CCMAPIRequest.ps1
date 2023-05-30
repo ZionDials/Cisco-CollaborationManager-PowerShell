@@ -19,12 +19,12 @@ Function Invoke-CCMAPIRequest {
 	)
 
 	$ConfigFile = Get-CCMSettingsFile
-	$cucm_path = $MyInvocation.MyCommand.Module.PrivateData['cucm_path']
-	$cred = Import-CliXml -Path "$cucm_path\cucm.cred"
+	$ccm_path = $MyInvocation.MyCommand.Module.PrivateData['ccm_path']
+	$cred = Import-CliXml -Path "$ccm_path\ccm.cred"
 
 	[System.Net.ServicePointManager]::ServerCertificateValidationCallback={$True}
 	$parms  = @{
-		'Uri' = $ConfigFile.Settings.CUCM.uri
+		'Uri' = $ConfigFile.Settings.CCM.uri
 		'Body' = $Request
 		'ContentType' = 'text/xml'
 		'Method' = 'POST'

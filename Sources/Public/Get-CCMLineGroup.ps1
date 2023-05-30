@@ -32,7 +32,7 @@ Function global:Get-CCMLineGroup {
 
     if ($UUID -ne "") {
         $SOAP = @"
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
         <soapenv:Header/>
         <soapenv:Body>
            <ns:getLineGroup>
@@ -65,7 +65,7 @@ Function global:Get-CCMLineGroup {
     }
     else {
         $SOAP = @"
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CUCM.version)">
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="$($ConfigFile.Settings.CCM.version)">
         <soapenv:Header/>
         <soapenv:Body>
         <ns:listLineGroup>
