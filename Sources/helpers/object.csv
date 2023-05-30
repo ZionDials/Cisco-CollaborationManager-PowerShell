@@ -1,0 +1,12 @@
+ModemPassthrough
+CiscoFaxRelay
+T38FaxRelay
+rtpPackageCapability
+mtPackageCapability
+resPackageCapability
+prePackageCapability
+sstPackageCapability
+rtpUnreachableOnOff
+rtpUnreachableTimeout
+rtcpReportInterval
+simpleSdpEnable
